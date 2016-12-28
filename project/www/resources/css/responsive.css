@@ -1,0 +1,97 @@
+@media (min-width: 576px)
+{
+	body
+	{
+		padding-top: 90px;
+	}
+
+	.navigation-wrapper .row
+	{
+		height: 90px;
+	}
+
+	.menu-item
+	{
+		padding-right: 45px;
+	}
+
+	.wall
+	{
+		padding: 45px 55px;
+	}
+
+	.expand-list:nth-child(1) ~ .expand-list
+	{
+		display: block;
+	}
+
+	.expand-list:nth-child(12) ~ .expand-list
+	{
+		display: none;
+	}
+}
+
+@media (min-width: 768px)
+{
+	.menu-item
+	{
+		font-size: 18px;
+	}
+
+	.container-wrapper
+	{
+		padding: 90px 0;
+	}
+
+	.logicon-header,
+	.header-text
+	{
+		margin-bottom: 80px;
+	}
+
+	.button-tech,
+	.button-team,
+	.button-course
+	{
+		margin-bottom: 20px;
+	}
+
+	.secticon
+	{
+		margin: 0 auto 78px;
+	}
+
+	.scroll-to-top
+	{
+		width: 80px;
+		height: 80px;
+	}
+
+	.wall
+	{
+		padding: 60px 80px;
+	}
+
+	.expand-list:nth-child(1) ~ .expand-list
+	{
+		display: block;
+	}
+
+	.expand-list:nth-child(16) ~ .expand-list
+	{
+		display: none;
+	}
+}
+
+@media (min-width: 940px)
+{
+	.expand-list:nth-child(1) ~ .expand-list
+	{
+		display: block;
+	}
+
+	.expand-list:nth-child(24) ~ .expand-list
+	{
+		display: none;
+	}
+}

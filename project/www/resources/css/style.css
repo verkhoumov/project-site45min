@@ -1,0 +1,1965 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&subset=cyrillic');
+
+body
+{
+	font-family: 'RobotoLight';
+	font-weight: normal;
+
+	padding-top: 60px;
+
+	color: #333;
+}
+
+/**
+ *  Блоки.
+ */
+.container-wrapper
+{
+	padding: 40px 0;
+}
+
+.container-dark
+{
+	background-color: #f9f9f9;
+}
+
+/**
+ *  Фирменные цвета.
+ */
+.courses-bg
+{
+	background-color: #6faa57;
+}
+
+.courses-text
+{
+	color: #6faa57;
+}
+
+.courses-bg-title
+{
+	color: #f6fff3;
+}
+
+.courses-bg-text
+{
+	color: #cff5c0;
+}
+
+.tech-bg
+{
+	background-color: #3b8bd5;
+}
+
+.tech-text
+{
+	color: #3b8bd5;
+}
+
+.tech-bg-title
+{
+	color: #eef7ff;
+}
+
+.tech-bg-text
+{
+	color: #b6d5f1;
+}
+
+.team-bg
+{
+	background-color: #6c4d7f;
+}
+
+.team-text
+{
+	color: #6c4d7f;
+}
+
+.team-bg-title
+{
+	color: #f9efff;
+}
+
+.team-bg-text
+{
+	color: #bd9bd2;
+}
+
+/**
+ *  Прочие элементы.
+ */
+hr
+{
+	width: 140px;
+	margin: 0 auto;
+
+	border: 0;
+	border-top: 1px solid #f0f0f0;
+}
+
+.overflow
+{
+	overflow: hidden;
+
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.wall
+{
+	margin-top: 15px;
+	padding: 30px;
+
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+/* Разделитель */
+.separator
+{
+	clear: both;
+
+	width: 100%;
+	height: 1px;
+}
+
+.separator-height-sm
+{
+	height: 15px;
+}
+
+.separator-height
+{
+	height: 30px;
+}
+
+.separator-height-lg
+{
+	height: 60px;
+}
+
+/* Скроллинг наверх */
+.scroll-to-top
+{
+	position: fixed;
+	z-index: 10;
+	right: 20px;
+	bottom: 20px;
+
+	display: flex;
+	visibility: hidden;
+
+	width: 50px;
+	height: 50px;
+
+	cursor: pointer;
+	transition: opacity .5s ease-out;
+
+	opacity: 0;
+	border: 1px solid rgba(0, 0, 0, .05);
+	border-radius: 4px;
+	background-color: rgba(255, 255, 255, .95);
+}
+
+.scroll-to-top.active
+{
+	visibility: visible;
+
+	opacity: 1;
+}
+
+.scroll-to-top-button
+{
+	margin: auto;
+
+	opacity: .1;
+}
+
+.scroll-to-top:hover .scroll-to-top-button
+{
+	opacity: .7;
+}
+
+/**
+ *  Типографика.
+ */
+/* Заголовки */
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4
+{
+	font-family: inherit;
+	font-weight: inherit;
+	line-height: 1.4;
+
+	margin: 0;
+	padding: 0;
+
+	color: inherit;
+}
+
+h1,
+.h1
+{
+	font-size: 3.85rem;
+
+	margin-bottom: 20px;
+}
+
+h2,
+.h2
+{
+	font-size: 2.7rem;
+
+	margin-bottom: 20px;
+}
+
+h3,
+.h3
+{
+	font-family: 'RobotoRegular';
+	font-size: 1.7rem;
+
+	margin-bottom: 20px;
+}
+
+h4,
+.h4
+{
+	font-family: 'RobotoMedium';
+	font-size: 1.15rem;
+
+	margin-bottom: 15px;
+}
+
+/* Текст */
+p
+{
+	font-size: 1.285rem;
+	font-weight: inherit;
+	line-height: 1.5;
+
+	margin: 0;
+	margin-bottom: 20px;
+	padding: 0;
+
+	color: #767676;
+}
+
+h1 + p,
+.h1 + p,
+.header-text
+{
+	font-size: 1.85rem;
+	line-height: 1.7;
+
+	margin-bottom: 0;
+}
+
+.small
+{
+	font-size: 1rem;
+
+	color: #aaa;
+}
+
+.tips
+{
+	font-family: 'RobotoRegular';
+	font-size: 1.15rem;
+
+	margin: 0;
+	margin-top: 20px;
+}
+
+b,
+strong
+{
+	font-family: 'RobotoMedium';
+	font-weight: normal;
+}
+
+a
+{
+	color: #0079d1;
+}
+
+a:hover,
+a:active,
+a:focus
+{
+	text-decoration: underline;
+
+	color: #004c84;
+	outline: none;
+}
+
+.footer-site-description
+{
+	margin-bottom: 40px;
+}
+
+/* Позиционирование текста */
+.no-margin
+{
+	margin: 0 !important;
+}
+
+/**
+ *  Картинки.
+ */
+
+
+.image-courses
+{
+	width: 100%;
+	min-width: 1%;
+	max-width: 300px;
+}
+
+.image-techs
+{
+	width: 100%;
+	min-width: 1%;
+	max-width: 460px;
+}
+
+.image-error
+{
+	width: 100%;
+	min-width: 1%;
+	max-width: 420px;
+}
+
+/**
+ *  Кнопки.
+ */
+/* По-умолчанию */
+.button
+{
+	font-family: 'RobotoMedium';
+	font-size: 1.15rem;
+	font-weight: normal;
+	line-height: 1.42857143;
+
+	display: inline-block;
+
+	margin-bottom: 0;
+	padding: 10px 18px;
+
+	cursor: pointer;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		-ms-user-select: none;
+			user-select: none;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	color: #767676;
+	border: 1px solid #e4e4e4;
+	border-radius: 4px;
+	background: transparent;
+	background-image: none;
+
+	-ms-touch-action: manipulation;
+		touch-action: manipulation;
+}
+
+.button,
+.button:hover,
+.button:active,
+.button:focus
+{
+	outline: 0;
+}
+
+.button:hover,
+.button:active
+{
+	text-decoration: none;
+
+	color: #333;
+	background-color: #e4e4e4;
+}
+
+.button:active
+{
+	opacity: 1;
+	box-shadow: inset 0 0 15px 2px rgba(0, 0, 0, .15);
+}
+
+.button-block
+{
+	display: block;
+
+	width: 100%;
+
+	text-align: center;
+}
+
+/* Стандартные кнопки */
+.button-success,
+.button-success:hover,
+.button-success:active
+{
+	color: #f7fff4;
+	border-color: #6faa57;
+	background-color: #6faa57;
+}
+
+.button-primary,
+.button-primary:hover,
+.button-primary:active
+{
+	color: #f4faff;
+	border-color: #0079d1;
+	background-color: #0079d1;
+}
+
+.button-success:hover,
+.button-primary:hover
+{
+	opacity: .8;
+}
+
+/* Для шапки сайта */
+.button-header,
+.button-header:hover,
+.button-header:active
+{
+	padding: 18px 40px;
+
+	color: #f7fff4;
+	border-color: #6faa57;
+	border-radius: 60px;
+	background-color: #6faa57;
+}
+
+.button-header:hover
+{
+	border-color: #627151;
+	background-color: #627151;
+}
+
+/* Специальные */
+.button-course
+{
+	margin-top: 20px;
+
+	color: #6faa57;
+}
+
+.button-course:hover,
+.button-course:active
+{
+	color: #f7fff4;
+	border-color: #6faa57;
+	background-color: #6faa57;
+}
+
+.button-tech
+{
+	margin-top: 20px;
+
+	color: #0079d1;
+}
+
+.button-tech:hover,
+.button-tech:active
+{
+	color: #f4faff;
+	border-color: #0079d1;
+	background-color: #0079d1;
+}
+
+.button-team
+{
+	margin-top: 20px;
+
+	color: #6c4d7f;
+}
+
+.button-team:hover,
+.button-team:active
+{
+	color: #faf4fe;
+	border-color: #6c4d7f;
+	background-color: #6c4d7f;
+}
+
+/* Маленькие */
+.button-small
+{
+	font-family: 'RobotoLight';
+	font-size: 1rem;
+
+	padding: 6px 12px;
+
+	border-radius: 3px;
+}
+
+/* Другие настройки кнопок */
+.button-inline > .button + .button
+{
+	margin-left: 15px;
+}
+
+/**
+ *  Навигация.
+ */
+.navigation-wrapper
+{
+	position: fixed;
+	z-index: 10;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+
+	border-bottom: 1px solid rgba(0, 0, 0, .05);
+	background-color: rgba(255, 255, 255, .95);
+}
+
+.navigation-wrapper .row
+{
+	height: 60px;
+}
+
+
+
+.menu
+{
+	float: right;
+
+	margin: 0;
+	padding: 0;
+
+	list-style: none;
+}
+
+.menu > li
+{
+	position: relative;
+
+	display: block;
+	float: left;
+}
+
+.menu > li + li
+{
+	margin-left: 30px;
+}
+
+.menu-item
+{
+	font-family: 'RobotoMedium';
+	font-size: 1.07rem;
+
+	position: relative;
+
+	display: block;
+
+	min-width: 30px;
+	min-height: 24px;
+}
+
+.menu-item:hover,
+.menu-item:focus
+{
+	text-decoration: none;
+
+	opacity: .7;
+}
+
+.menu-item:after
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+
+	display: block;
+
+	width: 30px;
+	height: 24px;
+
+	content: ' ';
+
+	background: url(/resources/img/sprite.png);
+}
+
+.menu-courses,
+.menu-courses:hover,
+.menu-courses:focus
+{
+	color: #6faa57;
+}
+
+.menu-courses:after
+{
+	background-position: -20px -20px;
+}
+
+.menu-techs,
+.menu-techs:hover,
+.menu-techs:focus
+{
+	color: #3b8bd5;
+}
+
+.menu-techs:after
+{
+	background-position: -50px -20px;
+}
+
+.menu-team,
+.menu-team:hover,
+.menu-team:focus
+{
+	color: #6c4d7f;
+}
+
+.menu-team:after
+{
+	background-position: -80px -20px;
+}
+
+/**
+ *  Шапка сайта.
+ */
+.header-wrapper
+{
+	background: #441944;
+	background: url(/resources/img/bg.png) center center no-repeat, linear-gradient(to bottom, #2e133c, #5a1f4c);
+	background-size: cover;
+}
+
+.header-error
+{
+	background: #f9f9f9;
+	background: url(/resources/img/bg.png) center center no-repeat, #f9f9f9;
+}
+
+
+
+.header-title
+{
+	color: #f2e5ff;
+}
+
+.header-text
+{
+	margin-bottom: 40px;
+
+	color: #a884b4;
+}
+
+.header-error .header-text
+{
+	margin-top: 90px;
+
+	color: #767676;
+}
+
+/**
+ *  Подвал сайта.
+ */
+.footer-copyright
+{
+	margin-top: 45px;
+}
+
+/**
+ *  Авторы.
+ */
+.authors-list
+{
+	margin-top: 20px;
+}
+
+.author
+{
+	width: inherit;
+	height: 78px;
+	margin-bottom: 20px;
+
+	cursor: pointer;
+}
+
+.author > img
+{
+	display: block;
+
+	width: inherit;
+	height: inherit;
+
+	opacity: .7;
+	border: none;
+	background-color: rgba(0, 0, 0, .02);
+
+	object-fit: cover;
+}
+
+.author:hover
+{
+	border-color: #c0c0c0;
+}
+
+.author:hover > img
+{
+	opacity: 1;
+}
+
+/* Дополнительные параметры */
+.authors-frame .author
+{
+	border-radius: 4px;
+	box-shadow: 0 0 0 1px #e4e4e4;
+}
+
+.authors-frame .author > img
+{
+	padding: 5px;
+}
+
+.authors-big .author
+{
+	width: inherit;
+	height: 140px;
+}
+
+.authors-pile
+{
+	display: inline-block;
+
+	margin: 0;
+}
+
+.authors-pile .author
+{
+	position: relative;
+	z-index: 1;
+
+	float: right;
+
+	width: 40px;
+	height: 40px;
+	margin: 0;
+
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 0 0 0 3px #fff;
+}
+
+.authors-pile .author + .author
+{
+	margin-right: -10px;
+}
+
+.authors-pile .author:hover
+{
+	z-index: 2;
+}
+
+.authors-pile .author > img
+{
+	border-radius: 50%;
+}
+
+/**
+ *  Теги.
+ */
+.tag-list
+{
+	display: block;
+
+	margin-bottom: 25px;
+}
+
+.tag-list-inline
+{
+	display: flex;
+
+	flex-wrap: wrap;
+}
+
+.tag-list-column
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.tag-list-popup
+{
+	margin-bottom: -12px;
+}
+
+.tag
+{
+	padding: 5px 10px;
+
+	cursor: pointer;
+	white-space: nowrap;
+
+	color: #51778f;
+	border-radius: 2px;
+	background-color: #d6e5f0;
+}
+
+.tag,
+.tag-add
+{
+	margin-bottom: 10px;
+}
+
+.tag:hover,
+.tag:focus
+{
+	color: #41667e;
+	background-color: #c1d6e4;
+}
+
+.tag.active
+{
+	color: #f2f9ff;
+	background-color: #0079d1;
+}
+
+.tag-add
+{
+	padding: 7px;
+
+	cursor: pointer;
+
+	border: 1px solid #0079d1;
+	border-radius: 2px;
+}
+
+.tag.active:hover,
+.tag.active:focus,
+.tag-add:hover,
+.tag-add:focus
+{
+	opacity: .6;
+}
+
+.tag-list-inline > .tag,
+.tag-list-inline > .tag-add
+{
+	margin-right: 10px;
+}
+
+.tag-list-column > .tag,
+.tag-list-column > .tag-add
+{
+	display: inline-table;
+}
+
+.tag-list-column > .tag:last-of-type,
+.tag-list-column > .tag-add:last-of-type
+{
+	margin-bottom: 0;
+}
+
+/**
+ *  Список уроков.
+ */
+.course-list
+{
+	margin-top: 20px;
+}
+
+.course
+{
+	width: inherit;
+	height: 200px;
+	margin-bottom: 20px;
+
+	cursor: pointer;
+
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+.course-inner
+{
+	position: relative;
+
+	width: inherit;
+	height: inherit;
+}
+
+.course-cap
+{
+	position: absolute;
+	z-index: 2;
+	top: 0;
+	left: 0;
+
+	display: none;
+
+	width: inherit;
+	height: inherit;
+	padding: 20px;
+
+	background-color: rgba(255, 255, 255, .95);
+}
+
+.course:hover .course-cap,
+.course:focus .course-cap
+{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+
+	text-decoration: none;
+
+	-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+	align-content: space-between;
+}
+
+.course-user
+{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+
+	width: 100%;
+
+	color: #333;
+
+	-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+	align-items: center;
+}
+
+.course-user-avatar > img
+{
+	display: block;
+
+	width: 30px;
+	height: 30px;
+
+	border-radius: 50%;
+
+	object-fit: cover;
+}
+
+.course-user-name
+{
+	margin-left: 10px;
+}
+
+.course-title
+{
+	font-family: 'RobotoMedium';
+	font-size: 1.15rem;
+
+	overflow: hidden;
+
+	width: 100%;
+	max-height: 70px;
+
+	color: #0079d1;
+}
+
+.course-date
+{
+	width: 100%;
+
+	color: #aaa;
+}
+
+.course-time
+{
+	font-size: .85rem;
+
+	position: absolute;
+	z-index: 1;
+	right: 20px;
+	bottom: 20px;
+
+	display: inline-block;
+
+	padding: 1px 5px;
+
+	color: #fff;
+	border-radius: 3px;
+	background-color: rgba(0, 0, 0, .8);
+}
+
+.course-inner > img
+{
+	font-size: 1.15rem;
+
+	width: inherit;
+	height: inherit;
+	padding: 10px;
+
+	text-align: center;
+
+	color: #333;
+
+	object-fit: cover;
+}
+
+/* Кнопка "Загрузить ещё" */
+.button-more
+{
+	display: none;
+}
+
+.button-more.active
+{
+	display: inherit;
+}
+
+/**
+ *  Технологии.
+ */
+.tech-list
+{
+	margin-top: 20px;
+}
+
+.tech
+{
+	position: relative;
+
+	width: inherit;
+	height: 80px;
+	margin-bottom: 20px;
+}
+
+.tech-cap
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	display: none;
+
+	width: 100%;
+	height: 100%;
+
+	cursor: pointer;
+	text-decoration: none;
+
+	border: 1px solid #c1dffa;
+	border-radius: 4px;
+	background-color: rgba(235, 246, 252, .95);
+
+	align-items: center;
+	justify-content: center;
+}
+
+.tech:hover .tech-cap
+{
+	display: flex;
+}
+
+.tech-name
+{
+	font-family: 'RobotoMedium';
+	font-size: 1.15rem;
+
+	margin: 10px;
+
+	color: #3b8bd5;
+}
+
+.tech > img
+{
+	width: inherit;
+	height: inherit;
+	padding: 10px;
+
+	object-fit: contain;
+}
+
+/* Скрытие большого кол-ва технологий. */
+.expand-list:nth-child(10) ~ .expand-list
+{
+	display: none;
+}
+
+.expand-open
+{
+	display: block !important;
+}
+
+/**
+ *  Формы.
+ */
+.form-group
+{
+	margin-bottom: 30px;
+}
+
+/* Label */
+label
+{
+	font-family: 'RobotoMedium';
+	font-size: 1.15rem;
+
+	display: inline-block;
+
+	margin-bottom: 15px;
+
+	color: #333;
+}
+
+.label-required
+{
+	position: relative;
+}
+
+.label-required:after
+{
+	top: 0;
+	right: 0;
+
+	padding-left: 5px;
+
+	content: '*';
+
+	color: #eb2d2d;
+}
+
+/* Input */
+.form-control,
+.jq-selectbox__select
+{
+	font-family: 'RobotoLight';
+	font-size: 1.07rem;
+	line-height: 1.42857143;
+
+	display: block;
+
+	width: 100%;
+	height: 44px;
+	padding: 10px 15px;
+
+	color: #767676;
+	border: 1px solid #e4e4e4;
+	border-radius: 4px;
+	outline: 0;
+	background: transparent;
+	background-image: none;
+
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+			appearance: none;
+}
+
+.form-control:focus,
+.jq-selectbox.focused .jq-selectbox__select
+{
+	border-color: #c4c4c4;
+	outline: 0;
+}
+
+.form-control::-moz-placeholder
+{
+	opacity: 1;
+	color: #e4e4e4;
+}
+
+.form-control:-ms-input-placeholder
+{
+	color: #e4e4e4;
+}
+
+.form-control::-webkit-input-placeholder
+{
+	color: #e4e4e4;
+}
+
+textarea.form-control
+{
+	height: auto;
+}
+
+/* Если форма содержит ошибку */
+.list-group-item-danger ~ .form-control,
+.list-group-item-danger ~ .jq-selectbox__select
+{
+	color: #f34523;
+	border-color: #f68d78;
+}
+
+/* jQueryFormStyler restyling */
+.jq-selectbox
+{
+	display: block;
+
+	width: 100%;
+}
+
+.jq-selectbox__select
+{
+	/* Новые стили */
+	padding: 6px 60px 6px 15px;
+	/* Сброс старых стилей */
+
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.jq-selectbox__select:hover,
+.jq-selectbox__select:active
+{
+	background: inherit;
+	box-shadow: inherit;
+}
+
+.jq-selectbox__select-text
+{
+	display: flex;
+	overflow: visible;
+
+	margin-top: 5px;
+
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.jq-selectbox__trigger
+{
+	width: 45px;
+
+	border-left-color: #e4e4e4;
+}
+
+.jq-selectbox__trigger-arrow
+{
+	/* Новые стили */
+	top: 16px;
+	right: 13px;
+
+	width: 17px;
+	height: 10px;
+
+	opacity: .2;
+	/* Сброс старых стилей */
+	border: none;
+	background: url(/resources/img/sprite.png);
+	background-position: -80px -424px;
+}
+
+.jq-selectbox__select:hover .jq-selectbox__trigger-arrow
+{
+	opacity: .5;
+}
+
+.jq-selectbox.opened .jq-selectbox__trigger-arrow
+{
+	opacity: .8;
+}
+
+.jq-selectbox__dropdown
+{
+	font-family: 'RobotoLight';
+	font-size: 1.07rem;
+	line-height: 1.42857143;
+	/* Новые стили */
+
+	margin-top: 10px;
+
+	border-color: #e4e4e4;
+	box-shadow: 0 10px 30px 10px rgba(0,0,0,.03);
+}
+
+.jq-selectbox__dropdown ul
+{
+	max-height: 300px;
+
+	border-radius: 4px;
+}
+
+.jq-selectbox li
+{
+	display: flex;
+
+	padding: 9px 14px;
+
+	color: #767676;
+
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.jq-selectbox li:hover,
+.jq-selectbox li.sel,
+.jq-selectbox li.selected
+{
+	color: #0078cf;
+	background: #f4fbff;
+}
+
+.feedback-user-photo
+{
+	display: block;
+
+	width: 26px;
+	height: 26px;
+
+	opacity: .8;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, .02);
+
+	object-fit: cover;
+	flex-shrink: 0;
+}
+
+.feedback-user-name
+{
+	margin-left: 15px;
+
+	flex-shrink: 0;
+}
+
+.feedback-user-email
+{
+	margin-left: 15px;
+
+	color: #bbb;
+}
+
+.jq-selectbox__select-text .feedback-user-photo,
+.jq-selectbox__select-text .feedback-user-name,
+.jq-selectbox__select-text .feedback-user-email
+{
+	margin-top: -3px;
+}
+
+.jq-selectbox li:hover .feedback-user-photo,
+.jq-selectbox li.sel .feedback-user-photo,
+.jq-selectbox li.selected .feedback-user-photo
+{
+	opacity: 1;
+}
+
+.jq-selectbox li:hover .feedback-user-email,
+.jq-selectbox li.sel .feedback-user-email,
+.jq-selectbox li.selected .feedback-user-email
+{
+	color: #9bc0e8;
+}
+
+/**
+ *  Модальные окна.
+ */
+/* Кнопка "Закрыть" */
+.close-button
+{
+	position: absolute;
+	z-index: 5;
+	top: -15px;
+	right: -15px;
+
+	width: 30px;
+	height: 30px;
+
+	cursor: pointer;
+
+	border-radius: 50%;
+	background-color: #f34523;
+}
+
+.close-button:after
+{
+	position: absolute;
+	top: 8px;
+	left: 8px;
+
+	width: 14px;
+	height: 14px;
+
+	content: ' ';
+
+	background: url(/resources/img/sprite.png) -50px -424px no-repeat;
+}
+
+.close-button:hover,
+.close-button:focus
+{
+	background-color: #ff7054;
+}
+
+/* Перенастройка Magnific-Popup */
+.themodal-overlay
+{
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0 !important;
+
+	overflow: auto;
+
+	width: 100%;
+	height: 100%;
+
+	background: rgba(249, 249, 249, .95);
+}
+
+.themodal-overlay:before
+{
+	display: inline-block;
+
+	height: 100%;
+
+	content: '';
+	vertical-align: middle;
+}
+
+/* Окно */
+.popup-wrapper
+{
+	display: inline-block;
+
+	width: 100%;
+	margin: 0 auto;
+	padding: 0 20px;
+
+	vertical-align: middle;
+}
+
+.popup
+{
+	position: relative;
+
+	max-width: 350px;
+	max-height: 650px;
+	margin: 40px auto;
+}
+
+.popup-inner
+{
+	position: relative;
+
+	height: inherit;
+	max-height: inherit;
+
+	border-radius: 4px;
+	background-color: #fff;
+	box-shadow: 0 15px 80px 20px rgba(0, 0, 0, .1);
+}
+
+.scrollbar
+{
+	position: relative;
+}
+
+.popup-group
+{
+	padding: 30px;
+}
+
+.popup-group + .popup-group,
+.filter-selector + .popup-group
+{
+	border-top: 1px solid #f4f4f4;
+}
+
+.popup-group-footer
+{
+	border-radius: 0 0 5px 5px;
+	background-color: #f9f9f9;
+}
+
+.popup-header
+{
+	text-align: center;
+}
+
+.popup-label
+{
+	font-family: 'RobotoMedium';
+	font-size: 1.15rem;
+
+	margin-bottom: 11px;
+}
+
+.popup-text
+{
+	font-size: 1rem;
+
+	margin: 0;
+}
+
+.popup-text + .popup-text
+{
+	margin-top: 15px;
+}
+
+/* Остальное */
+.popup-header > img
+{
+	width: 60px;
+	height: 60px;
+
+	object-fit: contain;
+}
+
+.popup-header-tech > img
+{
+	width: 120px;
+}
+
+.popup-header-author > img
+{
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, .02);
+
+	object-fit: cover;
+}
+
+.popup-header-name
+{
+	font-family: 'RobotoMedium';
+	font-size: 1.15rem;
+
+	margin-top: 16px;
+	margin-bottom: 3px;
+}
+
+
+
+.popup-author-city
+{
+	margin-bottom: 3px;
+
+	color: #aaa;
+}
+
+/**
+ *  Информация о пользователе (авторе).
+ */
+/* Список уроков автора */
+
+
+.popup-course-item
+{
+	display: flex;
+
+	align-items: center;
+}
+
+.popup-course-item + .popup-course-item
+{
+	margin-top: 20px;
+}
+
+.popup-course-item > img
+{
+	display: block;
+
+	width: 90px;
+	height: 60px;
+
+	opacity: .7;
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, .02);
+
+	flex-shrink: 0;
+	object-fit: cover;
+}
+
+.popup-course-item > .course-title
+{
+	font-size: 1rem;
+
+	position: relative;
+
+	display: block;
+
+	max-height: 60px;
+	margin-left: 15px;
+}
+
+.popup-course-item > .course-title:after
+{
+	position: absolute;
+	right: 0;
+	bottom: 0;
+
+	display: block;
+
+	width: 100px;
+	height: 18px;
+
+	content: ' ';
+
+	background: linear-gradient(100grad, transparent, #fff 80%);
+}
+
+.popup-course-item:hover,
+.popup-course-item:active,
+.popup-course-item:focus
+{
+	text-decoration: none;
+}
+
+.popup-course-item:hover > img
+{
+	opacity: 1;
+}
+
+.popup-course-item:hover > .course-title
+{
+	color: #004c84;
+}
+
+/* Контакты */
+
+
+
+
+.popup-user-link-item + .popup-user-link-item
+{
+	margin-top: 8px;
+}
+
+.popup-user-link
+{
+	position: relative;
+
+	display: block;
+
+	padding-left: 30px;
+}
+
+.popup-user-link:before
+{
+	opacity: .2;
+}
+
+.popup-user-link:hover:before
+{
+	opacity: .8;
+}
+
+/**
+ *  Фильтры.
+ */
+.popup-filter
+{
+	width: 100%;
+	max-width: 500px;
+	height: 380px;
+	max-height: 380px;
+}
+
+.filter-selector
+{
+	display: flex;
+
+	height: calc(100% - 95px);
+}
+
+.filter-list
+{
+	width: 50%;
+	padding: 30px;
+}
+
+.filter-list + .filter-list
+{
+	border-left: 1px solid #f4f4f4;
+}
+
+.filter-buttons
+{
+	display: flex;
+
+	justify-content: space-between;
+}
+
+/**
+ *  Урок.
+ */
+.popup-course
+{
+	width: 100%;
+	max-width: 600px;
+	height: inherit;
+	max-height: inherit;
+}
+
+.popup .course-user-avatar
+{
+	cursor: pointer;
+
+	opacity: .7;
+}
+
+.popup .course-user-avatar:hover
+{
+	opacity: 1;
+}
+
+.popup .course-user-name
+{
+	font-family: 'RobotoRegular';
+
+	cursor: pointer;
+
+	color: #3b8bd5;
+}
+
+.popup .course-user-name:hover
+{
+	text-decoration: underline;
+
+	color: #004c84;
+}
+
+.popup .course-user-avatar > img
+{
+	width: 40px;
+	height: 40px;
+
+	background-color: rgba(0, 0, 0, .02);
+
+	object-fit: cover;
+}
+
+.popup .course-date
+{
+	margin-left: 10px;
+}
+
+/* Рейтинг */
+.rating-wrapper
+{
+	font-size: 0;
+
+	display: inline-block;
+}
+
+.rating
+{
+	position: relative;
+
+	display: inline-block;
+
+	padding: 4px;
+
+	cursor: pointer;
+}
+
+.star
+{
+	position: relative;
+}
+
+.star:after
+{
+	position: absolute;
+	bottom: -10px;
+	left: 0;
+
+	display: none;
+
+	width: 100%;
+
+	content: ' ';
+
+	border-bottom: 3px solid #fec927;
+}
+
+.rating-value
+{
+	font-family: 'RobotoMedium';
+	font-size: 1.2rem;
+
+	display: inline-block;
+
+	margin: 2px 8px 0 0;
+
+	vertical-align: top;
+
+	color: #fec927;
+}
+
+.rating-wrapper:hover > .rating > .star
+{
+	background-position: -48px -384px;
+}
+
+.rating-wrapper:hover > .rating > .star:after
+{
+	display: block;
+}
+
+.rating-wrapper:hover > .rating:hover ~ .rating > .star
+{
+	background-position: -20px -384px;
+}
+
+.rating-wrapper:hover > .rating:hover ~ .rating > .star:after
+{
+	display: none;
+}
+
+/**
+ *  Perfect-Scrollbar рестайлинг.
+ */
+.ps-container > .ps-scrollbar-y-rail
+{
+	width: 22px;
+	margin: 7px 0;
+}
+
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail,
+.ps-container:hover > .ps-scrollbar-y-rail:hover,
+.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail
+{
+	background-color: transparent;
+}
+
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y
+{
+	background-color: #f00;
+}
+
+.ps-container.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y,
+.ps-container:hover.ps-in-scrolling.ps-y > .ps-scrollbar-y-rail > .ps-scrollbar-y,
+.ps-container:hover > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y,
+.ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y,
+.ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y,
+.ps-container > .ps-scrollbar-y-rail:active > .ps-scrollbar-y,
+.ps-container > .ps-scrollbar-y-rail:hover > .ps-scrollbar-y,
+.ps-container > .ps-scrollbar-y-rail:active > .ps-scrollbar-y
+{
+	right: 7px;
+
+	width: 8px;
+
+	background-color: #f1f1f1;
+}
+
+.ps-container > .ps-scrollbar-y-rail
+{
+	opacity: .6;
+}
+
+/**
+ *  Стилизация уведомлений.
+ */
+.noty_message
+{
+	font-size: inherit !important;
+	line-height: inherit !important;
+
+	position: inherit !important;
+
+	width: inherit !important;
+	padding: inherit !important;
+
+	text-align: inherit !important;
+}
+
+.list-group
+{
+	top: 110px !important;
+}
+
+.list-group-item
+{
+	font-family: 'RobotoRegular';
+	font-size: 1rem;
+
+	position: relative;
+
+	display: block;
+
+	height: auto !important;
+	margin-bottom: 15px;
+	padding: 15px 20px !important;
+
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	background-color: #fff;
+}
+
+.list-group-item-info
+{
+	color: #0079d1;
+	border-color: #7abae8;
+	background-color: #f4fbff;
+}
+
+.list-group-item-danger,
+.list-group-item-warning
+{
+	color: #f34523;
+	border-color: #f68d78;
+	background-color: #fad5cd;
+}
+
+.list-group-item-success
+{
+	color: #4f8837;
+	border-color: #a4cc93;
+	background-color: #d9efcf;
+}
+
+/**
+ *  Загрузка модального окна.
+ */
+.modal-loader
+{
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+
+	display: none;
+
+	width: 100%;
+	height: 100%;
+
+	background: rgba(255, 255, 255, .95);
+}
+
+.modal-loader.active
+{
+	display: flex;
+	overflow: hidden;
+}
+
+.modal-loader-text
+{
+	width: 64px;
+	height: 64px;
+	margin: auto;
+
+	background: url(/resources/img/preloader.gif);
+}
+
+/**
+ *  Стили для урока на отдельной странице.
+ */
+.course-page
+{
+	position: relative;
+
+	max-width: initial;
+	max-height: initial;
+	margin: 0;
+}

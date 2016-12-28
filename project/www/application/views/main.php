@@ -1,0 +1,3 @@
+{courses}
+{techs}
+{authors}

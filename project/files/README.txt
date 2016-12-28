@@ -1,0 +1,10 @@
+960-Grid-System-master - http://960.gs/
+Roboto - http://fonts4web.ru/roboto.html
+CodeIgniter-3.1.2 - http://www.codeigniter.com/
+history.js-1.8.0b2 - https://github.com/browserstate/history.js
+jQueryFormStyler-1.7.6 - http://dimox.name/jquery-form-styler/
+js-cookie-2.1.3 - https://github.com/js-cookie/js-cookie
+mustache.js-2.3.0 - https://github.com/janl/mustache.js
+noty-2.3.10 - https://github.com/needim/noty
+perfect-scrollbar - https://github.com/noraesae/perfect-scrollbar
+the-modal-0.1.7 - https://github.com/samdark/the-modal
