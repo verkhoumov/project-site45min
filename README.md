@@ -1,8 +1,9 @@
 Материалы
 ---
-* Видео-урок: https://youtu.be/BAF-5VsHuk0
-* Веб-сайт: http://site45min.ru/
-* Исходный код: https://github.com/verkhoumov/site45min
+* [Видео-урок](https://youtu.be/BAF-5VsHuk0)
+* [Веб-сайт](http://site45min.ru/)
+* [Исходный код](https://github.com/verkhoumov/site45min/tree/master/project/www)
+* [База данных](https://github.com/verkhoumov/site45min/tree/master/project/db)
 
 Технологии
 ---
