@@ -160,7 +160,7 @@ function get_link_name($link = '', $name = '', $pattern = '')
  */
 function get_social_link_name($link = '', $name = '')
 {
-	return get_link_name($link, $name, '#https?\:\/\/(.*)#i');
+	return get_link_name($link, $name, '#https?\:\/\/(.*)/#i');
 }
 
 /**
