@@ -126,8 +126,9 @@ class Courses_model extends MY_Model
 		$where     = (array) $where;
 
 		$result = [
-			'course' => [],
-			'techs'  => []
+			'course'  => [],
+			'techs'   => [],
+			'courses' => []
 		];
 
 		$subquery = [];

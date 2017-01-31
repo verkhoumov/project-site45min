@@ -110,7 +110,7 @@ function get_date($date = '', $format = 'j {month} в H:i')
 
  	// Кастомные шаблоны.
     $search = ['{month}'];
-    $pattern = [$months[date('m', $time)]];
+    $pattern = [$months[date('n', $time)]];
 
     // Обработка кастомных шаблонов.
     $length = count($search);

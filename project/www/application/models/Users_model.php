@@ -47,7 +47,7 @@ class Users_model extends MY_Model
 			->reset_query()
 			->from($this->db_courses)
 			->where('user_id', $user_id)
-			->order_by('date', 'DESC');
+			->order_by('id', 'DESC');
 
 		if ($query = $this->db->get())
 		{
