@@ -32,11 +32,7 @@
 					
 					{{#users.0}}
 					<div class="authors-list authors-pile">
-						{{#users}}
-						<div class="author popup-initiator" data-modal-type="user" data-user-id="{{id}}">
-							<img src="{{avatar}}" alt="{{name}}">
-						</div>
-						{{/users}}
+						{{#users}}<div class="author popup-initiator" data-modal-type="user" data-user-id="{{id}}"><img src="{{avatar}}" alt="{{name}}"></div>{{/users}}
 					</div>
 					{{/users.0}}
 

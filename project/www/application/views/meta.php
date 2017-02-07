@@ -18,15 +18,7 @@
 <link rel="icon" type="image/png" href="/resources/favicons/favicon-32.png" sizes="32x32">
 
 <!-- CSS -->
-<link rel="stylesheet" href="/resources/css/bootstrap.min.css?ver=1.0.0">
-<link rel="stylesheet" href="/resources/css/fonts.css?ver=1.0.0">
-<link rel="stylesheet" href="/resources/css/icons.css?ver=1.0.0">
-<link rel="stylesheet" href="/resources/css/the-modal.css?ver=1.0.0">
-<link rel="stylesheet" href="/resources/css/animate.css?ver=1.0.0">
-<link rel="stylesheet" href="/resources/css/jquery.formstyler.css?ver=1.0.0">
-<link rel="stylesheet" href="/resources/css/perfect-scrollbar.min.css?ver=1.0.0">
-<link rel="stylesheet" href="/resources/css/style.css?ver=1.0.0">
-<link rel="stylesheet" href="/resources/css/responsive.css?ver=1.0.0">
+<link rel="stylesheet" href="/resources/css/style.min.css?ver=1.0.0">
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!--[if lt IE 9]>

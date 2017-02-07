@@ -746,7 +746,7 @@ a:focus
 	position: relative;
 	z-index: 1;
 
-	float: right;
+	display: inline-block;
 
 	width: 40px;
 	height: 40px;
@@ -755,11 +755,9 @@ a:focus
 	border-radius: 50%;
 	background-color: #fff;
 	box-shadow: 0 0 0 3px #fff;
-}
 
-.authors-pile .author + .author
-{
-	margin-right: -10px;
+	margin-right: -9px;
+    margin-bottom: -9px;
 }
 
 .authors-pile .author:hover

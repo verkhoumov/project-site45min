@@ -136,8 +136,8 @@ function get_techs_count($count = 0)
 {
 	$count = (integer) $count;
 
-	$result = $count;
-	$result .= get_noun_word($count, ' различную технологию', ' различных технологии', ' различных технологий');
+	$result = 'более ' . $count;
+	$result .= get_noun_word($count, ' различной технологии', ' различных технологий', ' различных технологий');
 
 	return $result;
 }

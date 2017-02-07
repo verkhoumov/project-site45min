@@ -35,7 +35,7 @@
 			</div>
 
 			<div class="col-xs-12 col-md-8 col-lg-6">
-				<p class="tips text-xs-center">В общей сложности наши уроки затрагивают <br><strong>более {count}</strong>.</p>
+				<p class="tips text-xs-center">В общей сложности наши уроки затрагивают <br>{count}.</p>
 			</div>
 		</div>
 	</div>

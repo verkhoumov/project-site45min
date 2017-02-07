@@ -27,6 +27,12 @@ class Users_model extends MY_Model
 			'courses'  => []
 		];
 
+		$temp = [
+			'courses' => []
+		];
+
+		$subquery = '';
+
 		/**
 		 *  Пользователь.
 		 */
@@ -54,25 +60,36 @@ class Users_model extends MY_Model
 			foreach ($query->result_array() as $data)
 			{
 				$result['courses'][] = $data;
+				$temp['courses'][] = $data['id'];
 			}
 		}
 
 		/**
 		 *  Навыки.
+		 *
+		 *  Используется UNION запрос, чтобы объединить навыки, указанные автором, и технологии,
+		 *  применённые в уроке.
 		 */
-		$this->db
-			->reset_query()
-			->select('B.*')
-			->from($this->db_users_techs.' AS A')
-			->where('A.user_id', $user_id)
-			->join($this->db_techs.' AS B', 'A.tech_id = B.id')
-			->order_by('B.id', 'ASC');
-
-		if ($query = $this->db->get())
+		if ($user_id != 1)
 		{
-			foreach ($query->result_array() as $data)
+			if (!empty($temp['courses']))
 			{
-				$result['techs'][] = $data;
+				$subquery = 'UNION (SELECT `tech_id` FROM `'.$this->db_courses_techs.'` WHERE `course_id` IN ('.implode(', ', $temp['courses']).'))';
+			}
+
+			$this->db
+				->reset_query()
+				->select('`B`.*')
+				->from('((SELECT `tech_id` FROM `'.$this->db_users_techs.'` WHERE `user_id` = '.$user_id.') '.$subquery.') AS `A`')
+				->join($this->db_techs.' AS `B`', '`A`.`tech_id` = `B`.`id`')
+				->order_by('`B`.`id`', 'ASC');
+
+			if ($query = $this->db->get())
+			{
+				foreach ($query->result_array() as $data)
+				{
+					$result['techs'][] = $data;
+				}
 			}
 		}
 
@@ -93,7 +110,7 @@ class Users_model extends MY_Model
 			}
 		}
 
-		return $result;
+		return (array) $result;
 	}
 
 	/**
@@ -123,9 +140,15 @@ class Users_model extends MY_Model
 			}
 		}
 
-		return $result;
+		return (array) $result;
 	}
 
+	/**
+	 *  Список пользователей для формы обратной связи.
+	 *  
+	 *  @param   boolean  $with_array_key  [Создание массива с ключём по ID или без]
+	 *  @return  array
+	 */
 	public function get_feedback_users($with_array_key = FALSE)
 	{
 		$with_array_key = (boolean) $with_array_key;
@@ -157,7 +180,7 @@ class Users_model extends MY_Model
 			}
 		}
 
-		return $result;
+		return (array) $result;
 	}
 
 	/**
@@ -173,12 +196,12 @@ class Users_model extends MY_Model
 
 		$this->db
 			->reset_query()
-			->select('a.user_id as id, a.rating, '.$this->db_users.'.name, '.$this->db_users.'.avatar', FALSE)
-			->from('(SELECT * FROM '.$this->db_courses.' ORDER BY rating DESC) AS a')
-			->join($this->db_users, $this->db_users.'.id = a.user_id')
-			->group_by('a.user_id')
-			->order_by('a.rating', 'DESC')
-			->order_by('a.user_id', 'ASC')
+			->select('A.user_id as id, A.rating, B.name, B.avatar', FALSE)
+			->from('(SELECT * FROM '.$this->db_courses.' ORDER BY rating DESC) AS A')
+			->join($this->db_users.' AS B', 'B.id = A.user_id AND B.id != 1') // NOTE: id = 1 - Анонимный автор, его не надо показывать.
+			->group_by('A.user_id')
+			->order_by('A.rating', 'DESC')
+			->order_by('A.user_id', 'ASC')
 			->limit($limit);
 
 		if ($query = $this->db->get())
@@ -189,30 +212,7 @@ class Users_model extends MY_Model
 			}
 		}
 
-		return $result;
-	}
-
-	public function test($limit = 4)
-	{
-		$limit = (int) $limit;
-		$result = [];
-
-		$this->db
-			->reset_query()
-			->select('B.*, A.rating_summary')
-			->from('(SELECT user_id, SUM(rating) AS rating_summary FROM '.$this->db_courses.' GROUP BY user_id ORDER BY rating_summary DESC, user_id ASC) AS A')
-			->join($this->db_users.' AS B', 'B.id = A.user_id')
-			->limit($limit);
-
-		if ($query = $this->db->get())
-		{
-			foreach ($query->result_array() as $data)
-			{
-				$result[] = $data;
-			}
-		}
-
-		return $result;
+		return (array) $result;
 	}
 }
 

@@ -111,7 +111,7 @@ class Courses_model extends MY_Model
 			}
 		}
 
-		return $result;
+		return (array) $result;
 	}
 
 	/**
@@ -194,7 +194,7 @@ class Courses_model extends MY_Model
 			}
 		}
 
-		return $result;
+		return (array) $result;
 	}
 
 	/**

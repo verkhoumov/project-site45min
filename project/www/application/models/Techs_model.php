@@ -27,11 +27,9 @@ class Techs_model extends MY_Model
 			->select('A.*')
 			->from($this->db_techs.' AS A')
 			->join($this->db_courses_techs.' AS B', 'B.tech_id = A.id')
-			->where('B.id !=', NULL)
 			->where('A.code !=', NULL)
 			->where('A.name !=', NULL)
-			->order_by('A.image', 'DESC')
-			->order_by('A.code', 'ASC')
+			->order_by('COUNT(B.tech_id)', 'DESC')
 			->group_by('A.id')
 			->limit($limit);
 
@@ -43,7 +41,7 @@ class Techs_model extends MY_Model
 			}
 		}
 
-		return $result;
+		return (array) $result;
 	}
 
 	/**
@@ -62,6 +60,12 @@ class Techs_model extends MY_Model
 			'courses' => []
 		];
 
+		$temp = [
+			'courses' => []
+		];
+
+		$subquery = '';
+
 		/**
 		 *  Технологии.
 		 */
@@ -76,27 +80,6 @@ class Techs_model extends MY_Model
 		}
 
 		/**
-		 *  Специалисты.
-		 */
-		$this->db
-			->reset_query()
-			->select('B.*')
-			->from($this->db_users_techs.' AS A')
-			->join($this->db_users.' AS B', 'B.id = A.user_id')
-			->where('A.tech_id', $tech_id)
-			->order_by('B.id', 'DESC')
-			->group_by('B.id')
-			->limit(10);
-
-		if ($query = $this->db->get())
-		{
-			foreach ($query->result_array() as $data)
-			{
-				$result['users'][] = $data;
-			}
-		}
-
-		/**
 		 *  Уроки.
 		 */
 		$this->db
@@ -108,17 +91,46 @@ class Techs_model extends MY_Model
 			->order_by('B.rating', 'DESC')
 			->order_by('B.id', 'DESC')
 			->group_by('B.id')
-			->limit(3);
+			->limit(5);
 
 		if ($query = $this->db->get())
 		{
 			foreach ($query->result_array() as $data)
 			{
 				$result['courses'][] = $data;
+				$temp['courses'][] = $data['id'];
 			}
 		}
 
-		return $result;
+		/**
+		 *  Специалисты.
+		 *
+		 *  Используется UNION запрос, чтобы объединить пользователей, которые указали технологию в навыках,
+		 *  и авторов уроков, где применяются данные технологии.
+		 */
+		if (!empty($temp['courses']))
+		{
+			$subquery = 'UNION (SELECT `user_id` FROM `'.$this->db_courses.'` WHERE `id` IN ('.implode(', ', $temp['courses']).'))';
+		}
+
+		$this->db
+			->reset_query()
+			->select('`B`.*')
+			->from('((SELECT `user_id` FROM `'.$this->db_users_techs.'` WHERE `tech_id` = '.$tech_id.') '.$subquery.') AS `A`')
+			->join($this->db_users.' AS `B`', '`B`.`id` != 1 AND `A`.`user_id` = `B`.`id`')
+			->order_by('`B`.`id`', 'DESC')
+			->group_by('`B`.`id`')
+			->limit(10);
+
+		if ($query = $this->db->get())
+		{
+			foreach ($query->result_array() as $data)
+			{
+				$result['users'][] = $data;
+			}
+		}
+
+		return (array) $result;
 	}
 }
 

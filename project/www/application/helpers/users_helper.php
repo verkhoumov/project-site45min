@@ -95,9 +95,9 @@ function get_users_count($count = 0)
 {
 	$count = (integer) $count;
 
-	$result = get_noun_word($count, 'принял участие ', 'приняли участие ', 'приняли участие ');
+	$result = get_noun_word($count, 'принял участие более ', 'приняли участие более ', 'приняли участие более ');
 	$result .= $count;
-	$result .= get_noun_word($count, ' человек', ' человека', ' человек');
+	$result .= get_noun_word($count, ' человека', ' человек', ' человек');
 
 	return $result;
 }
