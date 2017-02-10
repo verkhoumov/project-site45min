@@ -17,9 +17,9 @@ function get_feedback_data($data = [])
 		$result['name'] = get_clear_string($data['name']);
 	}
 
-	if (isset($data['email']))
+	if (isset($data['from']))
 	{
-		$result['email'] = get_clear_string($data['email']);
+		$result['from'] = get_clear_string($data['from']);
 	}
 
 	if (isset($data['to']))

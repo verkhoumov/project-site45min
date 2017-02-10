@@ -23,6 +23,7 @@ class Feedback_model extends MY_Model
 
 		$this->db
 			->reset_query()
+			->set('date', 'NOW()', FALSE)
 			->insert($this->db_feedback, $data);
 			
 		$this->db->trans_complete();

@@ -16,7 +16,7 @@
 
 						<div class="form-group">
 							<label class="label-required" for="form-email">Куда следует отправить ответ?</label>
-							<input type="text" class="form-control" id="form-email" name="feedback[email]" placeholder="ivan.ivanov@yandex.ru">
+							<input type="text" class="form-control" id="form-email" name="feedback[from]" placeholder="ivan.ivanov@yandex.ru">
 						</div>
 
 						<div class="form-group">

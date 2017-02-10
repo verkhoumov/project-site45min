@@ -63,17 +63,17 @@ class Feedback_controller extends MY_Controller
 		{
 			$message = $this->parser->parse('email/feedback', $data + ['url' => site_url()], TRUE);
 
-			$this->email->initialize(['mailtype' => 'html']);
-			$this->email->from($data['email'], $data['name']);
+			$this->email->initialize(['mailtype' => 'html', 'protocol' => 'sendmail']);
+			$this->email->from($this->_config['support']['email'], $this->_config['title']);
 			$this->email->to($data['to']);
-			$this->email->subject($data['theme']);
+			$this->email->subject('Личное сообщение');
 			$this->email->message(nl2br($message));
 			
 			if ($this->email->send())
 			{
 				$status = 200;
 
-				# TODO: Сохранение сообщения в БД.
+				$this->feedback_model->set_feedback($data);
 			}
 		}
 
@@ -148,9 +148,9 @@ class Feedback_controller extends MY_Controller
 			$errors['name'] = 'Имя должно быть длинной не менее 2 и не более 50 символов.';
 		}
 
-		if (!isset($data['email']) || !filter_var($data['email'], FILTER_VALIDATE_EMAIL))
+		if (!isset($data['from']) || !filter_var($data['from'], FILTER_VALIDATE_EMAIL))
 		{
-			$errors['email'] = 'Адрес электронной почты указан неверно!';
+			$errors['from'] = 'Адрес электронной почты указан неверно!';
 		}
 
 		if (!isset($data['to']) || !filter_var($data['to'], FILTER_VALIDATE_EMAIL))
@@ -182,7 +182,7 @@ class Feedback_controller extends MY_Controller
 			'status' => 400,
 			'form' => [
 				'name'    => NULL,
-				'email'   => NULL,
+				'from'    => NULL,
 				'to'      => 0,
 				'theme'   => NULL,
 				'message' => NULL
