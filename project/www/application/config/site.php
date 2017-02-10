@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 $config['site'] = [
-	'title'       => 'Веб-сайт за 45 минут',
+	'title'       => 'Как создать сайт за 45 минут?',
 	'description' => 'Покажем на реальных примерах как можно создать современный адаптивный веб-сайт всего за 45 минут.',
 	
 	'author' => [
