@@ -1,0 +1,9 @@
+User-agent: *
+
+Disallow: /Ajax/*
+Disallow: /Cron/*
+Disallow: /*.html
+
+Host: site45min.ru
+
+Sitemap: http://site45min.ru/sitemap.xml

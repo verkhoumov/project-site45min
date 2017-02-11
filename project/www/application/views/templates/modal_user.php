@@ -63,29 +63,35 @@
 					<div class="popup-label">Контакты</div>
 
 					<div class="popup-user-links-list">
-						{{#contacts.link.0}}
-							{{#contacts.link}}
-							<div class="popup-user-link-item">
-								<a class="popup-user-link contact overflow" href="{{link}}" target="_blank">{{{name}}}</a>
-							</div>
-							{{/contacts.link}}
-						{{/contacts.link.0}}
-
-						{{#contacts.skype.0}}
+						{{#contacts.link}}
 						<div class="popup-user-link-item">
-							<span class="popup-user-link contact skype">{{{contacts.skype.0.link}}}</span>
+							<a class="popup-user-link contact overflow" href="{{link}}" target="_blank">{{{name}}}</a>
 						</div>
-						{{/contacts.skype.0}}
+						{{/contacts.link}}
 
-						{{#contacts.email.0}}
+						{{#contacts.skype}}
 						<div class="popup-user-link-item">
-							<span class="popup-user-link contact email">{{{contacts.email.0.link}}}</span>
+							<span class="popup-user-link contact skype">{{{link}}}</span>
 						</div>
-						{{/contacts.email.0}}
+						{{/contacts.skype}}
+
+						{{#contacts.email}}
+						<div class="popup-user-link-item">
+							<span class="popup-user-link contact email">{{{link}}}</span>
+						</div>
+						{{/contacts.email}}
+
+						{{#contacts.phone}}
+						<div class="popup-user-link-item">
+							<span class="popup-user-link contact phone">{{{link}}}</span>
+						</div>
+						{{/contacts.phone}}
 
 						{{^contacts.link}}
 							{{^contacts.skype}}
-								{{^contacts.email}}<p class="popup-text">Отсутствуют.</p>{{/contacts.email}}
+								{{^contacts.email}}
+									{{^contacts.phone}}<p class="popup-text">Отсутствуют.</p>{{/contacts.phone}}
+								{{/contacts.email}}
 							{{/contacts.skype}}
 						{{/contacts.link}}
 					</div>

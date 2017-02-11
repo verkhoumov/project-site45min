@@ -8,7 +8,7 @@
 
 				<p class="footer-site-description">Учим разрабатывать полноценные веб-сайты всего за 45 минут! У нас Вы узнаете обо всём, что может пригодиться при создании сайта любой сложности!</p>
 
-				<p class="small no-margin footer-copyright">Copyright &copy; <a href="https://vk.com/verkhoumov" target="_blank">Дмитрий Верхоумов</a>, 2016.</p>
+				<p class="small no-margin footer-copyright">Copyright &copy; <a href="https://vk.com/verkhoumov" target="_blank">Дмитрий Верхоумов</a>, 2017.</p>
 			</div>
 		</div>
 	</div>

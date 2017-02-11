@@ -760,7 +760,7 @@ $(document).ready(function() {
 		// оставляем страницу в самом верху.
 		if (!scrollToSection(element))
 		{
-			$('html, body').animate({scrollTop: 0});
+			// $('html, body').animate({scrollTop: 0});
 		}
 	});
 

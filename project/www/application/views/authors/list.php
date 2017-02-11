@@ -3,7 +3,7 @@
 		<div class="row flex-items-xs-center">
 			<div class="col-xs-12 col-md-8 col-lg-6">
 				<h2 class="text-xs-center">Авторы уроков</h2>
-				<p class="text-xs-center">Дизайнеры и веб-разработчики. Многие открыты к интересным предложениям о работе!</p>
+				<p class="text-xs-center">Дизайнеры и веб-разработчики. Многие открыты к интересным предложениям по работе!</p>
 			</div>
 
 			<div class="col-xs-12">

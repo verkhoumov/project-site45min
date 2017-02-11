@@ -176,6 +176,11 @@ hr
 	opacity: .1;
 }
 
+.scroll-to-top:hover
+{
+	border-color: rgba(0, 0, 0, .1);
+}
+
 .scroll-to-top:hover .scroll-to-top-button
 {
 	opacity: .7;
