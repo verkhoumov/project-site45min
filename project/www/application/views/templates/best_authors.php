@@ -1,5 +1,5 @@
 <!-- Урок -->
-<script id="template-modal-best-authors" type="x-tmpl-mustache">
+<script id="template-modal-best-authors" type="text/html">
 {{#users}}
 <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
 	<div class="author popup-initiator" data-modal-type="user" data-user-id="{{id}}">

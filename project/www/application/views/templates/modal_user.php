@@ -1,5 +1,5 @@
 <!-- Информация о пользователе -->
-<script id="template-modal-user" type="x-tmpl-mustache">
+<script id="template-modal-user" type="text/html">
 	<div id="modal-user" class="popup-wrapper" style="display: none">
 		<div class="popup">
 			<div class="close-button popup-close"></div>

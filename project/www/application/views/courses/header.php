@@ -6,7 +6,7 @@
 					<div class="secticon secticon-courses"></div>
 				</div>
 
-				<h1 class="courses-bg-title">Уроки</h1>
+				<h2 class="h1 courses-bg-title">Уроки</h2>
 				<p class="courses-bg-text">Каждый урок представляет собой скринкаст продолжительностью 45 минут. За это время автор на реальном примере покажет и расскажет о средствах и технологиях, используемых при создании веб-сайтов.</p>
 			</div>
 		</div>

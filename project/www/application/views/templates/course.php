@@ -1,4 +1,4 @@
-<script id="template-course" type="x-tmpl-mustache">
+<script id="template-course" type="text/html">
 	<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
 		<div class="course popup-initiator" data-modal-type="course" data-course-id="{{id}}">
 			<div class="course-inner">

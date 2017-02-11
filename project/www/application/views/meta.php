@@ -8,12 +8,12 @@
 <!-- Favicons -->
 <link rel="image_src" href="<?php echo site_url(); ?>resources/favicons/favicon-152.png">
 <meta property="og:image" content="<?php echo site_url(); ?>resources/favicons/favicon-152.png">
-<link rel="apple-touch-icon-precomposed" sizes="57x57" href="/resources/favicons/favicon-57.png">
-<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/resources/favicons/favicon-72.png">
-<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/resources/favicons/favicon-114.png">
-<link rel="apple-touch-icon-precomposed" sizes="120x120" href="/resources/favicons/favicon-120.png">
-<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/resources/favicons/favicon-144.png">
-<link rel="apple-touch-icon-precomposed" sizes="152x152" href="/resources/favicons/favicon-152.png">
+<link rel="apple-touch-icon" sizes="57x57" href="/resources/favicons/favicon-57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/resources/favicons/favicon-72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/resources/favicons/favicon-114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/resources/favicons/favicon-120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/resources/favicons/favicon-144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/resources/favicons/favicon-152.png">
 <link rel="icon" type="image/png" href="/resources/favicons/favicon-16.png" sizes="16x16">
 <link rel="icon" type="image/png" href="/resources/favicons/favicon-32.png" sizes="32x32">
 

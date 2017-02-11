@@ -2,20 +2,18 @@
 	<div class="container">
 		<div class="row flex-items-xs-center">
 			<div class="col-xs-12 col-md-8 col-lg-6">
-				<h2 class="text-xs-center">Авторы уроков</h2>
+				<h3 class="h2 text-xs-center">Авторы уроков</h3>
 				<p class="text-xs-center">Дизайнеры и веб-разработчики. Многие открыты к интересным предложениям по работе!</p>
 			</div>
 
 			<div class="col-xs-12">
 				<div class="authors-list authors-big">
 					<div class="row">
-						{list}
-						<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 expand-list expand-list-user">
+						{list}<div class="col-xs-6 col-sm-4 col-md-3 col-lg-2 expand-list expand-list-user">
 							<div class="author popup-initiator" data-modal-type="user" data-user-id="{id}">
 								<img src="{avatar}" alt="{name}">
 							</div>
-						</div>
-						{/list}
+						</div>{/list}
 					</div>
 
 					<div class="separator separator-height-sm"></div>

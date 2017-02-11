@@ -1,5 +1,5 @@
 <!-- Урок -->
-<script id="template-modal-course" type="x-tmpl-mustache">
+<script id="template-modal-course" type="text/html">
 	<div id="modal-course" class="popup-wrapper" style="display: none">
 		<div class="popup popup-course">
 			<div class="close-button popup-close"></div>

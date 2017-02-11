@@ -1,5 +1,5 @@
 <!-- Информация о технологии -->
-<script id="template-modal-tech" type="x-tmpl-mustache">
+<script id="template-modal-tech" type="text/html">
 	<div id="modal-tech" class="popup-wrapper" style="display: none">
 		<div class="popup">
 			<div class="close-button popup-close"></div>

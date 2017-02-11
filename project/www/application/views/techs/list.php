@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row flex-items-xs-center">
 			<div class="col-xs-12 col-md-8 col-lg-6">
-				<h2 class="text-xs-center">Перечень технологий</h2>
+				<h3 class="h2 text-xs-center">Перечень технологий</h3>
 				<p class="text-xs-center">Языки программирования, фреймворки, редакторы и среды разработки, библиотеки сторонних разработчиков, CMS и многое другое.</p>
 			</div>
 

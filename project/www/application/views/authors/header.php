@@ -6,7 +6,7 @@
 					<div class="secticon secticon-team"></div>
 				</div>
 
-				<h1 class="team-bg-title">Наша команда</h1>
+				<h2 class="h1 team-bg-title">Наша команда</h2>
 				<p class="team-bg-text">Молодые, талантливые и перспективные. Так можно сказать про каждого из нас. Не верите? Значит Вы ещё не посмотрели ни одного нашего урока!</p>
 			</div>
 		</div>

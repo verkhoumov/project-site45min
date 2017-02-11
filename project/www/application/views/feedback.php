@@ -8,6 +8,7 @@
 
 			<div class="col-xs-12 col-md-10 col-lg-8">
 				<div class="wall">
+					<!--noindex-->
 					<form method="POST" id="feedback">
 						<div class="form-group">
 							<label class="label-required" for="form-name">Как Вас зовут?</label>
@@ -20,9 +21,9 @@
 						</div>
 
 						<div class="form-group">
-							<label class="label-required" for="form-to">Автор урока или тех. поддержка</label>
+							<label class="label-required" for="select-feedback">Автор урока или тех. поддержка</label>
 							<select name="feedback[to]" id="select-feedback">
-								<option></option>
+								<option label="Выберите получателя"></option>
 								<option value="0" id="select-user-0">Техническая поддержка</option>
 								{list}<option value="{id}" id="select-user-{id}">{name}</option>{/list}
 							</select>
@@ -41,6 +42,7 @@
 						<button class="button button-primary hidden-xs-down" type="submit" name="feedback[send]">Отправить</button>
 						<button class="button button-primary button-block hidden-sm-up" type="submit" name="feedback[send]">Отправить</button>
 					</form>
+					<!--/noindex-->
 				</div>
 			</div>
 		</div>

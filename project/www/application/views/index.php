@@ -5,8 +5,10 @@
 
 	<body id="body">
 		<!-- Прочие элементы сайта -->
+		<!--noindex-->
 		{scroller}
 		{preloader}
+		<!--/noindex-->
 
 		<!-- Навигация -->
 		{menu}
@@ -33,7 +35,7 @@
 		{footer}
 
 		<!-- Шаблоны для Mustaches и The Modal -->
-		{templates}
+		<!--noindex-->{templates}<!--/noindex-->
 	
 		<!-- JavaScript's -->
 		{scripts}
