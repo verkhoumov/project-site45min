@@ -6,7 +6,7 @@ class Sitemap_controller extends MY_Controller
 	/**
 	 *  Пароль для доступа к обработчику.
 	 */
-	private $password = 'UYRgY3B1hYfMzyG7tCskbQSigA8xoy';
+	private $password = PRIVATE_SITEMAP_PASS;
 
 	/**
 	 *  Настройки для Sitemap.
